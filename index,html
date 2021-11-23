@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Fläche eines Rechtecks</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+
+			function tofahrenheit(celsius) {
+				return 1.8*celsius +32;
+			}
+			
+			function tocelsius(fahrenheit) {
+				return 5/9*(fahrenheit-32);
+			}
+
+			function clickedFahrenheit() {
+				let celsius = document.getElementById("idCelsius").value;
+				let ausgabe = "Eine Temperatur von " + celsius + " C° macht  in Fahrenheit: " + tofahrenheit(celsius) + " F° ";
+				document.getElementById("idAusgabe").innerHTML = ausgabe;
+			}
+				function clickedCelsius() {
+				let fahrenheit = document.getElementById("idFahrenheit").value;
+				let ausgabe = "Eine Temperatur von " + fahrenheit + " F° macht  in Fahrenheit: " + tocelsius(fahrenheit) + " C° ";
+				document.getElementById("idAusgabe").innerHTML = ausgabe;
+			}
+		</script>
+	</head>
+
+	<body>
+		<h1>Celius - Fahrenheit Umrechner</h1>
+		Celsius in Fahrenheit: <input id="idCelsius" type="text" value="25"><button onClick="clickedFahrenheit();">Berechne1!</button><br /><br />
+		Fahrenheit in Celsius: <input id="idFahrenheit" type="text" value="15"><button onClick="clickedCelsius();">Berechne2!</button><br /><br />
+	
+		
+		<div id="idAusgabe">Hier kommt beim Klicken auf den Button eine Ausgabe.</div>
+	</body>
+</html>
